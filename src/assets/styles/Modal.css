@@ -1,0 +1,111 @@
+.modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal__backdrop {
+  position: absolute;
+  z-index: 500;
+  background-color: white;
+  width: 40%;
+  height: auto;
+  border-radius: 30px;
+}
+
+.modal__backdrop__title {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.modal__backdrop__description {
+  padding: 0 80px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.modal__backdrop__mark {
+  font-size: 30px;
+  width: 30%;
+  text-align: center;
+  margin: 20px auto;
+  position: relative;
+}
+
+.modal__backdrop__mark span {
+  font-weight: bold;
+  padding: 0 20px;
+}
+
+.modal__backdrop__btn {
+  padding: 10px 20px;
+  outline: none;
+  display: block;
+  margin: 10px auto;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-color: #4dd2ff;
+  font-size: 18px;
+  color: white;
+  -webkit-transition: .25s;
+  transition: .25s;
+  cursor: pointer;
+}
+
+.modal__backdrop__btn:hover {
+  background-color: white;
+  border-color: #000;
+  color: black;
+}
+
+.modal__backdrop__orange {
+  color: #CC9900;
+}
+
+.modal__backdrop__red {
+  color: #CC0000;
+}
+
+.modal__backdrop__green {
+  color: #009404;
+}
+
+@media all and (min-width: 300px) and (max-width: 1000px) {
+  .modal__backdrop {
+    width: 90%;
+  }
+  .modal__backdrop__title {
+    padding: 20px 0;
+  }
+  .modal__backdrop__description {
+    padding: 0 5px;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 14px;
+  }
+  .modal__backdrop__mark {
+    font-size: 30px;
+    width: 30%;
+    text-align: center;
+    margin: 20px auto;
+    position: relative;
+  }
+  .modal__backdrop__mark span {
+    font-weight: bold;
+    padding: 0 20px;
+  }
+}
+/*# sourceMappingURL=Modal.css.map */
