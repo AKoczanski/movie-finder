@@ -4,12 +4,11 @@ import Modal from "../UI/Modal";
 import ReactDOM from "react-dom";
 import MovieContext from "../../store/movie-context";
 import ErrorModal from "../UI/ErrorModal";
-import useAos from "../../hooks/useAos";
 
 const RANDOM = Math.floor(Math.random() * 500) + 1;
 const API_KEY = `${process.env.REACT_APP_API_KEY + RANDOM}`;
 
-const Movies = (props) => {
+const Movies = () => {
   const ctx = useContext(MovieContext);
   const [movieId, setMovieId] = useState();
   const [movieTitle, setMovieTitle] = useState();
