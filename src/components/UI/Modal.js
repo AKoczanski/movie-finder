@@ -1,20 +1,14 @@
-import React, { useState, useEffect } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
-
-let color = " ";
+import React, { useState } from "react";
+import useAos from "../../hooks/useAos";
 
 const Modal = (props) => {
   const [showModal, setShowModal] = useState(true);
+  useAos(400);
 
   const closeModalHandler = () => {
     setShowModal(false);
     props.closeModal();
   };
-
-  useEffect(() => {
-    Aos.init({ duration: 800 });
-  }, []);
 
   const setMarkColor = (mark) => {
     if (mark >= 7.8) {
@@ -30,7 +24,7 @@ const Modal = (props) => {
     <React.Fragment>
       {showModal && (
         <div className="modal" onClick={closeModalHandler}>
-          <div className="modal__backdrop" data-aos="flip-up">
+          <div className="modal__backdrop" data-aos="zoom-in">
             <h1 className="modal__backdrop__title">{props.title}</h1>
             <p className="modal__backdrop__description">{props.description}</p>
             <div className="modal__backdrop__mark">

@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg";
 import MovieContext from "../../store/movie-context";
 
@@ -14,6 +14,9 @@ function Search() {
       fetch(SEARCH_API + inputRef.current.value)
         .then((res) => res.json())
         .then((data) => {
+          data.results.length === 0
+            ? ctx.checkForError(true)
+            : ctx.checkForError(false);
           ctx.addMovies(data.results);
         });
       inputRef.current.value = "";
